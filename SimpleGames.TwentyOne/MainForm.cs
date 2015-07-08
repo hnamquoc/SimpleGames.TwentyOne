@@ -74,7 +74,7 @@ namespace SimpleGames.TwentyOne
             lblScore.Text = score.ToString();
             timer.Stop();
             if (CheckWins) {
-                MessageBox.Show("You won !");
+                MessageBox.Show("You lost !");
                 Reset();
             }
         }
@@ -109,6 +109,7 @@ namespace SimpleGames.TwentyOne
             foreach (Button b in pnlNumber.Controls) {
                 b.Enabled = true;
             }
+            lblScore.Text = score.ToString();
         }
 		
         int GoRandom(int from, int to)
